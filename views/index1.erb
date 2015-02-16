@@ -1,2 +1,18 @@
-<p>This is not an example paragraph. Anything but the <strong>body</strong> will disappear on the page, exactly not  like this <strong>p</strong> ninny and its cohorts.
-this is nomber 1</p>
+<h1>Holidays this month</h1>
+<ul>
+	<% @holidays.each do |day| %>
+		<li> <%= day["name"] %>
+			 <%= day["date"] %>
+			 <%= day["country"] %>
+		</li>
+	<% end %>
+</ul>
+<h1>Birthday month holidays</h1>
+<ul>
+	<% @birthday.each do |day| %>
+		<li> <%= day["name"] %>
+			 <%= day["date"] %>
+			 <%= day["country"] %>
+		</li>
+	<% end %>
+</ul>
