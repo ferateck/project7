@@ -1,18 +1,36 @@
-<h1>Holidays this month</h1>
+<h1>Holidays of the date entered</h1>
 <ul>
-	<% @holidays.each do |day| %>
-		<li> <%= day["name"] %>
-			 <%= day["date"] %>
-			 <%= day["country"] %>
-		</li>
-	<% end %>
+  <% @holidays.each do |day| %>
+    <li> <%= day["name"] %>
+       <%= day["date"] %>
+       <%= day["country"] %>
+    </li>
+  <% end %>
 </ul>
-<h1>Birthday month holidays</h1>
-<ul>
-	<% @birthday.each do |day| %>
-		<li> <%= day["name"] %>
-			 <%= day["date"] %>
-			 <%= day["country"] %>
-		</li>
-	<% end %>
-</ul>
+
+
+<%= params %>
+<form>
+  <select name="month">
+    <option value="1">Jaunuary</option>
+    <option value="2">Febuary</option>
+    <option value="3">March</option>
+    <option value="4">April</option>
+    <option value="5">May</option>
+    <option value="6">June</option>
+    <option value="7">July</option>
+    <option value="8">August</option>
+    <option value="9">September</option>
+    <option value="10">October</option>
+    <option value="11">November</option>
+    <option value="12">December</option>
+  </select>
+  <select name="country">
+    <option value="US">USA</option>
+    <option value="GB">Great Britain</option>
+    <option value="BR">Brazil</option>
+    <option value="BE">Belgium</option>
+  </select>
+  Pick a Year:<input type="number" name="year" required>
+  <input type="submit">
+</form>
