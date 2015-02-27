@@ -11,7 +11,7 @@
 
 <%= params %>
 <form>
-  <select name="month">
+  <select name="month" value="<?php echo $_GET['month'];?>">
     <option value="1">Jaunuary</option>
     <option value="2">Febuary</option>
     <option value="3">March</option>
@@ -25,12 +25,12 @@
     <option value="11">November</option>
     <option value="12">December</option>
   </select>
-  <select name="country">
+  <select name="country" value="<?php echo $_GET['country'];?>">
     <option value="US">USA</option>
     <option value="GB">Great Britain</option>
     <option value="BR">Brazil</option>
     <option value="BE">Belgium</option>
   </select>
   Pick a Year:<input type="number" name="year" required>
-  <input type="submit">
+  <input type="submit" value="submit">
 </form>
